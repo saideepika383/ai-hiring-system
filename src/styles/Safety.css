@@ -1,0 +1,29 @@
+.safety-page {
+  background: #f8fafc;
+  min-height: 80vh;
+  padding: 60px 20px;
+}
+
+.safety-container {
+  max-width: 1000px;
+  margin: auto;
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,.1);
+}
+
+.safety-container h1,
+.safety-container h2 {
+  color: #1e3a8a;
+}
+
+.safety-container p,
+.safety-container li {
+  color: #555;
+  line-height: 1.8;
+}
+
+.safety-container ul {
+  padding-left: 20px;
+}

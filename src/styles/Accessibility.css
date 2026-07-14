@@ -1,0 +1,29 @@
+.accessibility-page {
+  background: #f8fafc;
+  min-height: 80vh;
+  padding: 60px 20px;
+}
+
+.accessibility-container {
+  max-width: 1000px;
+  margin: auto;
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,.1);
+}
+
+.accessibility-container h1,
+.accessibility-container h2 {
+  color: #1e3a8a;
+}
+
+.accessibility-container p,
+.accessibility-container li {
+  color: #555;
+  line-height: 1.8;
+}
+
+.accessibility-container ul {
+  padding-left: 20px;
+}

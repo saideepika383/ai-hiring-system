@@ -1,0 +1,38 @@
+.why-choose-us {
+  padding: 70px 50px;
+    background: #bfdbfe;
+  
+  text-align: center;
+}
+
+.why-choose-us h2 {
+  color: #1e3a8a;
+  margin-bottom: 40px;
+  font-size: 32px;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  width: 300px;
+   background: #dbeafe;
+  
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.feature-card h3 {
+  color: #1e3a8a;
+  margin-bottom: 15px;
+}
+
+.feature-card p {
+  color: #555;
+  line-height: 1.6;
+}
