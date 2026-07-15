@@ -1,6 +1,5 @@
 import "../styles/Login.css";
 import { Link } from "react-router-dom";
-//import API from "../api";
 
 function Login() {
   return (
@@ -29,7 +28,9 @@ function Login() {
             <input type="checkbox" /> Remember Me
           </label>
 
-          <Link to="/forgot-password">Forgot Password?</Link>
+          <Link to="/forgot-password">
+            Forgot Password?
+          </Link>
         </div>
 
         <button className="login-btn">Login</button>
@@ -46,7 +47,6 @@ function Login() {
             ⬅️ Back to Home
           </button>
         </Link>
-
       </div>
     </div>
   );

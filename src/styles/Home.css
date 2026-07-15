@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
   margin: 0;
   padding: 0;
@@ -204,4 +205,10 @@ body {
 .footer p {
   font-size: 16px;
   color: #d1d5db;
+=======
+.home {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+>>>>>>> 1c1d947ab9492b3775e3c0987dcc5aaad5796c02
 }

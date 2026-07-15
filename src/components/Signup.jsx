@@ -33,7 +33,7 @@ function Signup() {
   return (
     <div className="container">
       <div className="card">
-        <h1>Create Account</h1>
+        <h1 className="signup-title">Create Account</h1>
 
         <form onSubmit={handleSignup}>
           <label>Full Name</label>

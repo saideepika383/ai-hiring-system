@@ -5,7 +5,7 @@ import Signup from "./components/Signup";
 import ForgotPassword from "./components/ForgotPassword";
 
 function App() {
-  return ( 
+  return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
