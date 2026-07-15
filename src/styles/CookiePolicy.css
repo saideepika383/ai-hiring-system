@@ -1,0 +1,35 @@
+.cookie-page {
+  background: #f8fafc;
+  padding: 60px 20px;
+  min-height: 80vh;
+}
+
+.cookie-container {
+  max-width: 1000px;
+  margin: auto;
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.cookie-container h1 {
+  color: #1e3a8a;
+  margin-bottom: 20px;
+}
+
+.cookie-container h2 {
+  color: #1e3a8a;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.cookie-container p,
+.cookie-container li {
+  color: #555;
+  line-height: 1.8;
+}
+
+.cookie-container ul {
+  padding-left: 20px;
+}

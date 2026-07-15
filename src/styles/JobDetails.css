@@ -1,0 +1,31 @@
+.job-details {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.job-details h2 {
+  color: #1e3a8a;
+  margin-bottom: 20px;
+}
+
+.job-details h3 {
+  margin-top: 20px;
+}
+
+.job-details p {
+  line-height: 1.6;
+}
+
+.apply-btn {
+  margin-top: 25px;
+  padding: 12px 25px;
+  background: #1e3a8a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
