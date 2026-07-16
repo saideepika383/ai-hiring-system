@@ -1,32 +1,41 @@
-import { Link } from "react-router-dom";
 import "../styles/Header.css";
 
-function Header() {
+function Header({ onLoginClick, onSignupClick }) {
   return (
     <header className="header">
+
       <div className="logo">
         <h2>SNHOOR International</h2>
       </div>
 
       <nav>
         <ul className="nav-links">
-          <li><Link to="/home">Home</Link></li>
-          <li><Link to="/jobs">Jobs</Link></li>
-          <li><Link to="/companies">Companies</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
+          <li>Home</li>
+          <li>Jobs</li>
+          <li>Companies</li>
+          <li>About</li>
+          <li>Contact</li>
         </ul>
       </nav>
 
       <div className="auth-buttons">
-        <Link to="/login">
-          <button className="login-btn">Login</button>
-        </Link>
 
-        <Link to="/register">
-          <button className="register-btn">Register</button>
-        </Link>
+        <button 
+          className="login-btn"
+          onClick={onLoginClick}
+        >
+          Login
+        </button>
+
+        <button 
+          className="register-btn"
+          onClick={onSignupClick}
+        >
+          Register
+        </button>
+
       </div>
+
     </header>
   );
 }
