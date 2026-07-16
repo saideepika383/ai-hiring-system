@@ -1,5 +1,5 @@
 body{
-<<<<<<< HEAD
+
     margin:0;
     padding:0;
     font-family: Arial, Helvetica, sans-serif;
@@ -81,7 +81,7 @@ button:hover{
 
 .bottom-text a:hover{
     text-decoration:underline;
-=======
+
   margin:0;
   font-family:Arial,sans-serif;
   background:#0f172a;
@@ -163,5 +163,5 @@ button{
   color:#38bdf8;
   text-decoration:none;
   font-weight:bold;
->>>>>>> 1c1d947ab9492b3775e3c0987dcc5aaad5796c02
+
 }
