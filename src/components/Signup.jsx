@@ -1,76 +1,116 @@
-import "../styles/Signup.css";
-import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import API from "../api";
+import { Link } from "react-router-dom";
+import api from "../api/api";
+import "../styles/Login.css";
 
-function Signup() {
-  const navigate = useNavigate();
+function Signup({ onLoginClick }) {
 
-  const [name, setName] = useState("");
+  const [full_name, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSignup = async (e) => {
-    e.preventDefault();
+  const handleSignup = async () => {
+
+    if (!full_name || !email || !password) {
+      alert("Please fill all fields");
+      return;
+    }
 
     try {
-      const response = await API.post("/auth/register", {
-        name,
+
+      const res = await api.post("/auth/register", {
+        full_name,
         email,
         password,
       });
 
-      alert("Registration Successful!");
-      console.log(response.data);
+      alert("Registration Successful ✅");
 
-      navigate("/login");
+      console.log(res.data);
+
+      if (onLoginClick) {
+        onLoginClick();
+      }
+
     } catch (error) {
+
       console.error(error);
-      alert("Registration Failed!");
+
+      alert(
+        error.response?.data?.message ||
+        "Registration Failed"
+      );
+
     }
   };
 
   return (
     <div className="container">
+
       <div className="card">
-        <h1 className="signup-title">Create Account</h1>
 
-        <form onSubmit={handleSignup}>
-          <label>Full Name</label>
-          <input
-            type="text"
-            placeholder="Enter your name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-          />
+        <h1 className="login-title">
+          Create Account
+        </h1>
 
-          <label>Email</label>
-          <input
-            type="email"
-            placeholder="Enter your email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
+        <p className="login-subtitle">
+          Register for AI Hiring System
+        </p>
 
-          <label>Password</label>
-          <input
-            type="password"
-            placeholder="Enter password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
+        <label>Name</label>
 
-          <button type="submit">Sign Up</button>
-        </form>
+        <input
+          type="text"
+          placeholder="Enter your name"
+          value={full_name}
+          onChange={(e) => setFullName(e.target.value)}
+        />
+
+        <label>Email Address</label>
+
+        <input
+          type="email"
+          placeholder="Enter your email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+
+        <label>Password</label>
+
+        <input
+          type="password"
+          placeholder="Create password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+
+        <button
+          className="login-btn"
+          onClick={handleSignup}
+        >
+          Sign Up
+        </button>
 
         <p className="bottom-text">
           Already have an account?{" "}
-          <Link to="/login">Login</Link>
+          <span
+            onClick={onLoginClick}
+            style={{ cursor: "pointer", color: "blue" }}
+          >
+            Login
+          </span>
         </p>
+
+        <br />
+
+        <Link to="/">
+          <button className="home-btn">
+            ⬅️ Back to Home
+          </button>
+        </Link>
+
       </div>
+
     </div>
   );
 }

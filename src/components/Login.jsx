@@ -1,48 +1,70 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import api from "../api/api";
 import "../styles/Login.css";
 
-function Login({ onSignupClick }) {
+function Login({ onSignupClick, onHomeClick }) {
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleLogin = async () => {
+
+    if (!email || !password) {
+      alert("Please enter email and password");
+      return;
+    }
+
     try {
-      const res = await fetch("https://ai-hiring-system-backend.railway.app", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email,
-          password,
-        }),
+
+      const res = await api.post("/auth/login", {
+        email,
+        password,
       });
 
-      const data = await res.json();
+      alert("Login Successful ✅");
 
-      if (res.ok) {
-        alert("Login Successful");
-        console.log(data);
-      } else {
-        alert(data.message || "Login Failed");
+      // Save Token
+      localStorage.setItem("token", res.data.token);
+
+      // Save User Details
+      localStorage.setItem(
+        "user",
+        JSON.stringify(res.data.user)
+      );
+
+      console.log(res.data);
+
+      // Home page ki redirect
+      if (onHomeClick) {
+        onHomeClick();
       }
+
     } catch (error) {
+
       console.error(error);
-      alert("Server Error");
+
+      alert(
+        error.response?.data?.message ||
+        "Login Failed"
+      );
     }
   };
 
   return (
     <div className="container">
+
       <div className="card">
-        <h1 className="login-title">Welcome Back</h1>
+
+        <h1 className="login-title">
+          Welcome Back
+        </h1>
 
         <p className="login-subtitle">
           Please enter your details to sign in
         </p>
 
         <label>Email Address</label>
+
         <input
           type="email"
           placeholder="Enter your email"
@@ -51,9 +73,10 @@ function Login({ onSignupClick }) {
         />
 
         <label>Password</label>
+
         <input
           type="password"
-          placeholder="Enter password"
+          placeholder="Enter your password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
@@ -63,12 +86,20 @@ function Login({ onSignupClick }) {
             <input type="checkbox" /> Remember Me
           </label>
 
-          <Link to="/forgot-password">
+          <span
+            style={{
+              color: "blue",
+              cursor: "pointer"
+            }}
+          >
             Forgot Password?
-          </Link>
+          </span>
         </div>
 
-        <button className="login-btn" onClick={handleLogin}>
+        <button
+          className="login-btn"
+          onClick={handleLogin}
+        >
           Login
         </button>
 
@@ -76,7 +107,10 @@ function Login({ onSignupClick }) {
           Don't have an account?{" "}
           <span
             onClick={onSignupClick}
-            style={{ cursor: "pointer", color: "blue" }}
+            style={{
+              color: "blue",
+              cursor: "pointer"
+            }}
           >
             Sign Up
           </span>
@@ -84,12 +118,15 @@ function Login({ onSignupClick }) {
 
         <br />
 
-        <Link to="/">
-          <button className="home-btn">
-            ⬅️ Back to Home
-          </button>
-        </Link>
+        <button
+          className="home-btn"
+          onClick={onHomeClick}
+        >
+          ⬅️ Back to Home
+        </button>
+
       </div>
+
     </div>
   );
 }
