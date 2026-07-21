@@ -1,0 +1,95 @@
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background: #1e3a8a;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  padding: 25px 0;
+}
+
+.sidebar-logo {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.sidebar-logo h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.sidebar-logo p {
+  margin-top: 6px;
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu li {
+  padding: 15px 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+.sidebar-menu li:hover {
+  background: #2563eb;
+}
+
+.sidebar-menu li.active {
+  background: white;
+  border-radius: 12px;
+  margin: 0 15px;
+}
+
+.sidebar-menu li.active a {
+  color: #1e3a8a;
+  font-weight: bold;
+}
+
+.sidebar-menu svg {
+  font-size: 18px;
+}
+
+.sidebar-menu li a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar-menu li a:hover {
+  color: white;
+}
+
+.sidebar-menu li a:visited {
+  color: white;
+}
+
+.logout {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logout:hover {
+  background: #dc2626;
+}
+
+.logout svg {
+  font-size: 18px;
+}

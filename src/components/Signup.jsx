@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+
 import api from "../api/api";
 import "../styles/Login.css";
 
-function Signup({ onLoginClick }) {
+function Signup({ onLoginClick,onHomeClick}) {
 
   const [full_name, setFullName] = useState("");
   const [email, setEmail] = useState("");
@@ -103,11 +103,12 @@ function Signup({ onLoginClick }) {
 
         <br />
 
-        <Link to="/">
-          <button className="home-btn">
-            ⬅️ Back to Home
-          </button>
-        </Link>
+       <button
+  className="home-btn"
+  onClick={onHomeClick}
+>
+  ⬅️ Back to Home
+</button>
 
       </div>
 

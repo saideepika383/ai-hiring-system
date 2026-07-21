@@ -1,0 +1,73 @@
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f7fa;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 40px;
+  padding: 20px;
+  background: #f5f7fa;
+}
+.top-section {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+  margin: 20px 0;
+  align-items: start;
+}
+
+.top-section .cards {
+  margin: 0;
+}
+
+.top-section .profile-card {
+  width: 100%;
+}
+.middle-section {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+
+.middle-section .chart-card {
+  flex: 3;
+  margin: 0;
+}
+
+.middle-section .activity {
+  flex: 1;
+}
+
+.dashboard h1 {
+  color: #1e3a8a;
+}
+.chart-card,
+.profile-card,
+.activity,
+.recent-jobs,
+.featured-companies,
+.statistics,
+.upcoming-interviews{
+    transition:0.3s;
+}
+
+.chart-card:hover,
+.profile-card:hover,
+.activity:hover,
+.recent-jobs:hover,
+.featured-companies:hover,
+.statistics:hover,
+.upcoming-interviews:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+}
+.bottom-section{
+    display:grid;
+    grid-template-columns:1.8fr 1.2fr;
+    gap:20px;
+    margin-top:20px;
+}
+

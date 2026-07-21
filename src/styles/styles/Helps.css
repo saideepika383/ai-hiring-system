@@ -1,0 +1,58 @@
+.dashboard{
+    display:flex;
+}
+
+.main-content{
+    flex:1;
+    padding:30px;
+    background:#f5f7fb;
+    min-height:100vh;
+}
+
+.subtitle{
+    color:gray;
+    margin-bottom:20px;
+}
+
+.help-container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.help-box{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.help-box h3{
+    color:#0b4da2;
+    margin-bottom:20px;
+}
+
+.help-box h4{
+    margin-top:15px;
+    color:#333;
+}
+
+.help-box p{
+    color:#555;
+    margin-top:5px;
+}
+
+.contact-btn{
+    margin-top:20px;
+    padding:12px 25px;
+    background:#0b4da2;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.contact-btn:hover{
+    background:#083b7d;
+}

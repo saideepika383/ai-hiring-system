@@ -9,17 +9,27 @@ import Footer from "./components/Footer";
 
 import Login from "./components/Login";
 import Signup from "./components/Signup";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   const [page, setPage] = useState("home");
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
     <>
       {page === "home" && (
         <>
-          <Header 
+          <Header
             onLoginClick={() => setPage("login")}
             onSignupClick={() => setPage("signup")}
+            onDashboardClick={() => {
+              if (isLoggedIn) {
+                setPage("dashboard");
+              } else {
+                alert("Please login first.");
+                setPage("login");
+              }
+            }}
           />
 
           <Hero />
@@ -31,18 +41,23 @@ function App() {
       )}
 
       {page === "login" && (
-        <Login 
+        <Login
           onSignupClick={() => setPage("signup")}
-          onHomeClick={() => setPage("home")}
+          onHomeClick={() => {
+            setIsLoggedIn(true);
+            setPage("home");
+          }}
         />
       )}
 
       {page === "signup" && (
-        <Signup 
+        <Signup
           onLoginClick={() => setPage("login")}
           onHomeClick={() => setPage("home")}
         />
       )}
+
+      {page === "dashboard" && <Dashboard />}
     </>
   );
 }

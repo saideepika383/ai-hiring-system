@@ -2,7 +2,8 @@ import { useState } from "react";
 import api from "../api/api";
 import "../styles/Login.css";
 
-function Login({ onSignupClick, onHomeClick }) {
+
+function Login({ onSignupClick, onHomeClick, onLoginSuccess }) {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -23,6 +24,7 @@ function Login({ onSignupClick, onHomeClick }) {
 
       alert("Login Successful ✅");
 
+
       // Save Token
       localStorage.setItem("token", res.data.token);
 
@@ -35,8 +37,8 @@ function Login({ onSignupClick, onHomeClick }) {
       console.log(res.data);
 
       // Home page ki redirect
-      if (onHomeClick) {
-        onHomeClick();
+      if (onLoginSuccess) {
+        onLoginSuccess();
       }
 
     } catch (error) {

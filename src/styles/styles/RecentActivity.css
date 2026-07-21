@@ -1,0 +1,43 @@
+.activity{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    min-height: 300px;
+}
+
+.activity h2{
+    color:#1e3a8a;
+    margin-bottom:20px;
+}
+
+.activity ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.activity li{
+    padding:16px 0;
+    border-bottom:1px solid #eee;
+    font-size:14px;
+}
+
+.activity li:last-child{
+    border-bottom:none;
+}
+.view-btn{
+    width:100%;
+    margin-top:20px;
+    padding:10px;
+    border:none;
+    border-radius:8px;
+    background:#2563eb;
+    color:white;
+    cursor:pointer;
+    font-size:14px;
+}
+
+.view-btn:hover{
+    background:#1d4ed8;
+}

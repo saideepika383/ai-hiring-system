@@ -1,0 +1,68 @@
+.dashboard{
+  display:flex;
+}
+
+.main-content{
+  flex:1;
+  padding:30px;
+  background:#f5f7fb;
+  min-height:100vh;
+}
+
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
+}
+
+.header button{
+  background:#0b4da2;
+  color:#fff;
+  border:none;
+  padding:10px 20px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.search-box{
+  width:100%;
+  padding:10px;
+  margin-bottom:20px;
+  border:1px solid #ccc;
+  border-radius:8px;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  background:#fff;
+  border-radius:10px;
+  overflow:hidden;
+}
+
+th{
+  background:#0b4da2;
+  color:#fff;
+  padding:12px;
+}
+
+td{
+  padding:12px;
+  border-bottom:1px solid #eee;
+}
+
+.scheduled{
+  color:green;
+  font-weight:bold;
+}
+
+.completed{
+  color:blue;
+  font-weight:bold;
+}
+
+.pending{
+  color:orange;
+  font-weight:bold;
+}

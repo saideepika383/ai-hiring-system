@@ -1,0 +1,46 @@
+.recent-jobs{
+    background:#fff;
+    margin:0;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    width:100%;
+}
+
+.recent-jobs h2{
+    color:#1e3a8a;
+    margin-bottom:20px;
+}
+
+.recent-jobs table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.recent-jobs th{
+    text-align:left;
+    padding:15px;
+    background:#f3f4f6;
+    color:#374151;
+}
+
+.recent-jobs td{
+    padding:15px;
+    border-bottom:1px solid #eee;
+}
+
+.active{
+    background:#dcfce7;
+    color:#15803d;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:13px;
+}
+
+.closed{
+    background:#fee2e2;
+    color:#dc2626;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:13px;
+}

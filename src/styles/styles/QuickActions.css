@@ -1,0 +1,40 @@
+.quick-actions{
+    background:#fff;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+     height:100%;          
+    display:flex;
+    flex-direction:column;
+}
+
+
+.quick-actions h2{
+    color:#1e3a8a;
+    margin-bottom:20px;
+}
+
+.quick-actions button{
+    width:100%;
+    padding:14px;
+    margin-bottom:12px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:white;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:15px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.quick-actions button:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+}
+
+.quick-actions button:last-child{
+    margin-bottom:0;
+}
