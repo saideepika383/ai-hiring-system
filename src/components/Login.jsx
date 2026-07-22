@@ -3,7 +3,7 @@ import api from "../api/api";
 import "../styles/Login.css";
 
 
-function Login({ onSignupClick, onHomeClick, onLoginSuccess }) {
+function Login({ onSignupClick, onHomeClick,onLoginSuccess}) {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -38,7 +38,7 @@ function Login({ onSignupClick, onHomeClick, onLoginSuccess }) {
 
       // Home page ki redirect
       if (onLoginSuccess) {
-        onLoginSuccess();
+          onLoginSuccess();
       }
 
     } catch (error) {

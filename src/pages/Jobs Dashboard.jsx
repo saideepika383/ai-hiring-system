@@ -1,4 +1,4 @@
-import "../styles/Jobs.css";
+import "../styles/Jobs Dashboard.css";
 
 function Jobs() {
   return (

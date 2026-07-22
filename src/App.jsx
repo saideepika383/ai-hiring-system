@@ -13,7 +13,6 @@ import Dashboard from "./pages/Dashboard";
 
 function App() {
   const [page, setPage] = useState("home");
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
     <>
@@ -22,14 +21,6 @@ function App() {
           <Header
             onLoginClick={() => setPage("login")}
             onSignupClick={() => setPage("signup")}
-            onDashboardClick={() => {
-              if (isLoggedIn) {
-                setPage("dashboard");
-              } else {
-                alert("Please login first.");
-                setPage("login");
-              }
-            }}
           />
 
           <Hero />
@@ -43,21 +34,24 @@ function App() {
       {page === "login" && (
         <Login
           onSignupClick={() => setPage("signup")}
-          onHomeClick={() => {
-            setIsLoggedIn(true);
-            setPage("home");
-          }}
+          onHomeClick={() => setPage("home")}
+          onLoginSuccess={() => setPage("dashboard")}
         />
+       
+       
+
       )}
 
       {page === "signup" && (
         <Signup
           onLoginClick={() => setPage("login")}
           onHomeClick={() => setPage("home")}
+          
         />
       )}
-
-      {page === "dashboard" && <Dashboard />}
+       {page ==="dashboard"&& (
+       <Dashboard />
+       )}
     </>
   );
 }

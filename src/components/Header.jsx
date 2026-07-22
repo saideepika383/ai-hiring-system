@@ -1,6 +1,6 @@
 import "../styles/Header.css";
 
-function Header({ onLoginClick, onSignupClick,onDashboardClick}) {
+function Header({ onLoginClick, onSignupClick }) {
   return (
     <header className="header">
 
@@ -20,26 +20,19 @@ function Header({ onLoginClick, onSignupClick,onDashboardClick}) {
 
       <div className="auth-buttons">
 
-        <button 
+        <button
           className="login-btn"
           onClick={onLoginClick}
         >
           Login
         </button>
 
-        <button 
+        <button
           className="register-btn"
           onClick={onSignupClick}
         >
           Register
         </button>
-
-        <button
-  className="dashboard-btn"
-  onClick={onDashboardClick}
->
-  Dashboard
-</button>
 
       </div>
 

@@ -46,9 +46,9 @@
 }
 
 .stat-card {
-  width: 100px;
+  width: 140px;
   height: 110px;
-  background: white;
+  background: blueviolet;
   color: #1e3a8a;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);

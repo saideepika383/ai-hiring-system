@@ -1,51 +1,85 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+<div className="main-content" id="dashboard"></div>
+import Sidebar from "../components/Sidebar";
+import Topbar from "../components/Topbar";
+import DashboardCards from "../components/DashboardCards";
+import VacancyChart from "../components/VacancyChart";
+import ProfileCard from "../components/ProfileCard";
+import RecentJobs from "../components/RecentJobs";
+import QuickActions from "../components/QuickActions";
+import FeaturedCompanies from "../components/FeaturedCompanies";
+import Statistics from "../components/Statistics";
+import RecentActivity from "../components/RecentActivity";
+import UpcomingInterviews from "../components/UpcomingInterviews";
+
+import Footer from "../components/Footer Dashboard";
+
 import "../styles/Dashboard.css";
+import "../styles/Sidebar.css";
+import "../styles/Topbar.css";
+import "../styles/DashboardCards.css";
+import "../styles/VacancyChart.css";
+import "../styles/ProfileCard.css";
+import "../styles/RecentJobs.css";
+import "../styles/QuickActions.css";
+import "../styles/FeaturedCompanies.css";
+import "../styles/Statistics.css";
+import "../styles/RecentActivity.css";
+import "../styles/UpcomingInterviews.css";
+
+import "../styles/Footer Dashboard.css";
+
 
 function Dashboard() {
   return (
-    <>
-      <Header />
+    <div className="dashboard">
+  <Sidebar />
 
-      <section className="dashboard-page">
-        <div className="dashboard-container">
+  <div className="main-content">
+    <Topbar />
 
-          <h1>Candidate Dashboard</h1>
+    <div className="top-section">
+      <DashboardCards />
+      <ProfileCard />
+    </div>
+    <div className="middle-section">
+      <VacancyChart />
+      <RecentActivity />
+    </div>
 
-          <p>
-            Welcome to your dashboard. Manage your job applications and profile
-            from one place.
-          </p>
+    
+    <div className="bottom-section">
 
-          <div className="dashboard-cards">
+  <div id="jobs">
+    <RecentJobs />
+  </div>
 
-            <div className="dashboard-card">
-              <h3>Applied Jobs</h3>
-              <p>View all the jobs you have applied for.</p>
-            </div>
+  <QuickActions />
 
-            <div className="dashboard-card">
-              <h3>Saved Jobs</h3>
-              <p>Keep track of your favorite job opportunities.</p>
-            </div>
+</div>
 
-            <div className="dashboard-card">
-              <h3>Profile</h3>
-              <p>Update your personal information and resume.</p>
-            </div>
+<div id="companies">
+  <FeaturedCompanies />
+</div>
 
-            <div className="dashboard-card">
-              <h3>Notifications</h3>
-              <p>Receive updates about new jobs and applications.</p>
-            </div>
+<Statistics />
+<UpcomingInterviews />
 
-          </div>
 
-        </div>
-      </section>
+<div id="contact-info" className="contact-info">
+  <h3>Contact Us</h3>
+  <p>📧 support@jobportal.com</p>
+  <p>📞 +91 9876543210</p>
+</div>
 
-      <Footer />
-    </>
+
+
+
+
+
+<Footer />
+  </div>
+</div>
+   
   );
 }
 
