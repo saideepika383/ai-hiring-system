@@ -1,6 +1,6 @@
 <div className="main-content" id="dashboard"></div>
 import Sidebar from "../components/Sidebar";
-import Topbar from "../components/Topbar";
+import DashboardHeader from "../components/DashboardHeader";
 import DashboardCards from "../components/DashboardCards";
 import VacancyChart from "../components/VacancyChart";
 import ProfileCard from "../components/ProfileCard";
@@ -15,7 +15,7 @@ import Footer from "../components/Footer Dashboard";
 
 import "../styles/Dashboard.css";
 import "../styles/Sidebar.css";
-import "../styles/Topbar.css";
+import "../styles/DashboardHeader.css";
 import "../styles/DashboardCards.css";
 import "../styles/VacancyChart.css";
 import "../styles/ProfileCard.css";
@@ -35,7 +35,7 @@ function Dashboard() {
   <Sidebar />
 
   <div className="main-content">
-    <Topbar />
+    <DashboardHeader />
 
     <div className="top-section">
       <DashboardCards />
